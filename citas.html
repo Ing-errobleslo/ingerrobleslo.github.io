@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Vitalis - Citas Reservadas</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-vitalis text-white py-3 shadow-sm">
+    <div class="container d-flex justify-content-center">
+      <div class="bg-white p-2 rounded shadow-sm">
+        <img src="img/logo.png" alt="Logo Clínica Vitalis" height="60">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-vitalis-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-house-medical"></i> Inicio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="especialidades.html"><i class="fa-solid fa-stethoscope"></i> Especialidades</a></li>
+          <li class="nav-item"><a class="nav-link" href="reserva.html"><i class="fa-solid fa-calendar-plus"></i> Reserva</a></li>
+          <li class="nav-item"><a class="nav-link active" href="citas.html"><i class="fa-solid fa-calendar-check"></i> Citas</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container my-5">
+    <h2 class="text-center text-vitalis fw-bold mb-4">
+      <i class="fa-solid fa-calendar-check"></i> Citas Reservadas
+    </h2>
+
+    <div class="table-responsive shadow-sm rounded">
+      <table class="table table-striped table-hover align-middle text-center tabla-vitalis">
+        <thead class="table-success">
+          <tr>
+            <th><i class="fa-solid fa-user"></i> Nombre</th>
+            <th><i class="fa-solid fa-id-card"></i> DNI</th>
+            <th><i class="fa-solid fa-stethoscope"></i> Especialidad</th>
+            <th><i class="fa-solid fa-calendar-day"></i> Fecha</th>
+            <th><i class="fa-solid fa-clock"></i> Hora</th>
+          </tr>
+        </thead>
+        <tbody id="tablaCitas">
+          <!-- Aquí se insertarán las citas dinámicamente -->
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-vitalis-light text-center py-3 mt-5 border-top">
+    <p class="mb-0 text-vitalis-dark">
+      <i class="fa-solid fa-heart-pulse"></i> &copy; 2025 Clínica Vitalis. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/citas.js"></script>
+</body>
+</html>

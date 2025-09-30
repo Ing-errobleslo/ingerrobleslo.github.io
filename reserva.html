@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Vitalis - Reserva de Cita</title>
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+  <link rel="icon" href="img/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-vitalis text-white py-3 shadow-sm">
+    <div class="container d-flex justify-content-center">
+      <div class="bg-white p-2 rounded shadow-sm">
+        <img src="img/LogoClinica.png" alt="Logo Clínica Vitalis" height="60">
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-vitalis-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        <i class="fa-solid fa-house-medical"></i> Inicio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="especialidades.html"><i class="fa-solid fa-stethoscope"></i> Especialidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="reserva.html"><i class="fa-solid fa-calendar-plus"></i> Reserva</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="citas.html"><i class="fa-solid fa-calendar-check"></i> Citas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenido principal -->
+  <main class="container my-5">
+    <h2 class="text-center text-vitalis fw-bold mb-4">
+      <i class="fa-solid fa-calendar-plus"></i> Reservar Cita
+    </h2>
+
+    <div class="card shadow-sm border-0 p-4">
+      <form id="formReserva" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label"><i class="fa-solid fa-user"></i> Nombre completo</label>
+          <input type="text" class="form-control" id="nombre" required>
+          <div class="invalid-feedback">Ingrese su nombre completo.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="dni" class="form-label"><i class="fa-solid fa-id-card"></i> DNI</label>
+          <input type="text" class="form-control" id="dni" required>
+          <div class="invalid-feedback">Ingrese su documento.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="especialidad" class="form-label"><i class="fa-solid fa-stethoscope"></i> Especialidad</label>
+          <select class="form-select" id="especialidad" required>
+            <option value="">Seleccione...</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Traumatología">Traumatología</option>
+            <option value="Dermatología">Dermatología</option>
+            <option value="Neumología">Neumología</option>
+            <option value="Psiquiatría">Psiquiatría</option>
+            <option value="Ginecología">Ginecología</option>
+            <option value="Odontología">Odontología</option>
+            <option value="Oftalmología">Oftalmología</option>
+          </select>
+          <div class="invalid-feedback">Seleccione una especialidad.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="fecha" class="form-label"><i class="fa-solid fa-calendar-day"></i> Fecha</label>
+          <input type="date" class="form-control" id="fecha" required>
+          <div class="invalid-feedback">Seleccione una fecha.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="hora" class="form-label"><i class="fa-solid fa-clock"></i> Hora</label>
+          <input type="time" class="form-control" id="hora" required>
+          <div class="invalid-feedback">Seleccione una hora.</div>
+        </div>
+
+        <button type="submit" class="btn btn-vitalis w-100">
+          <i class="fa-solid fa-paper-plane"></i> Reservar
+        </button>
+      </form>
+    </div>
+
+    <!-- Mensaje de confirmación -->
+    <div id="mensajeConfirmacion" class="alert alert-success mt-3 d-none text-center">
+      <i class="fa-solid fa-circle-check"></i> Su cita ha sido registrada con éxito.
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-vitalis-light text-center py-3 mt-5 border-top">
+    <p class="mb-0 text-vitalis-dark">
+      <i class="fa-solid fa-heart-pulse"></i> &copy; 2025 Clínica Vitalis. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/formulario.js"></script>
+</body>
+</html>
